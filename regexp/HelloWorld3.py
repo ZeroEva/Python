@@ -1,0 +1,6 @@
+import re
+
+txt = r'''https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500 1x, https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500 2x" class="photo-item__img" alt="Photo of Red Rose" data-image-width="2124" data-image-height="3186" data-big-src="https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-tiny-src="https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" data-tiny-srcset="https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500 1x, https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500 2x" data-pin-media="https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg'''
+x = re.findall('http.*?/photos/.*?.jpeg', txt)
+for x0 in x:
+    print(x0)
